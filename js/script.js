@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const terminalIntro = document.getElementById("terminal-lines");
   const terminalDiv = document.getElementById("neofetch-output");
   let lineIndex = 0, charIndex = 0;
-  const typingSpeed = 1;
+  const typingSpeed = 50;
   const cursor = document.createElement("span");
   cursor.textContent = "█";
   terminalIntro.appendChild(cursor);
