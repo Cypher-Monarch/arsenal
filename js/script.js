@@ -95,7 +95,6 @@ Mood    : Chaotic Good
     promptLine.appendChild(input);
     terminalDiv.appendChild(promptLine);
 
-    input.focus();
     terminalDiv.scrollTop = terminalDiv.scrollHeight;
 
     input.addEventListener("keydown", (e) => {
