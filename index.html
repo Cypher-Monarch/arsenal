@@ -1,131 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-    <title>Arsenal | Cypher-Monarch</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
-  </head>
-  <body>
-    <div id="terminal-intro" class="intro-terminal">
-      <pre id="terminal-lines"></pre>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <title>Arsenal | Cypher-Monarch</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <div id="terminal-intro" class="intro-terminal">
+    <pre id="terminal-lines"></pre>
+  </div>
+
+  <!-- Header -->
+  <header class="arsenal-header">
+    <h1>Cypher-Monarch's Arsenal</h1>
+    <p>Where code meets fun and intention — my complete dev loadout</p>
+  </header>
+
+  <!-- OS Setup Section -->
+  <section class="arsenal-section">
+    <h2 data-title="SECTION NAME">Operating System</h2>
+
+    <h3><strong>Daily Driver: Arch Linux (Bare‑Metal)</strong></h3>
+    <p>
+      My main machine runs <strong>Arch Linux</strong> with <strong>Hyprland</strong> — fast, minimal, and tuned until
+      it feelt perfect.<br />
+      Encrypted with <code>LUKS</code>, formatted with <code>Btrfs</code>, and backed by <code>Snapper</code> for
+      instant rollback —
+      because I like to break things while experimenting and still recover without pain.<br />
+      It’s my full development environment — every tool I need is exactly where I want it.<br />
+      (PS- Extra flex points cz i have setup grub-btrfs, which lets just say, windows restore points can only dream of
+      achieving)
+    </p>
+    <div class="screenshot-gallery">
+      <img src="assets/hypr1-bare.png" alt="Hyprland Bare Rice Screenshot 1" />
+      <img src="assets/hypr2-bare.png" alt="Hyprland Bare Rice Screenshot 2" />
+      <img src="assets/hypr3-bare.png" alt="Hyprland Bare Rice Screenshot 3" />
     </div>
 
-    <!-- Header -->
-    <header class="arsenal-header">
-      <h1>Cypher-Monarch's Arsenal</h1>
-      <p>Where chaos meets code — my complete dev loadout</p>
-    </header>
-
-    <!-- OS Setup Section -->
-    <section class="arsenal-section">
-      <h2 data-title="SECTION NAME">Operating System</h2>
-      <p>
-        My main setup is <strong>Arch Linux</strong>, running live from a 300GB
-        external HDD.<br />
-        Encrypted with <code>LUKS</code>, formatted with <code>Btrfs</code>, and
-        using <code>Snapper</code> for effortless rollback.<br />
-        It’s powered by <strong>Hyprland</strong> — minimal, clean, and
-        perfectly chaotic.
-      </p>
-      <div class="screenshot-gallery">
-        <img src="assets/hypr1.png" alt="Hyprland Rice Screenshot 1" />
-        <img src="assets/hypr2.png" alt="Hyprland Rice Screenshot 2" />
-        <img src="assets/hypr3.png" alt="Hyprland RIce Screenshot 3" />
-      </div>
-
-      <h3>Dual-Boot: Kali Linux</h3>
-      <p>
-        For pen-testing and advanced tinkering, I use
-        <strong>Kali Linux</strong> with a custom
-        <strong>KDE Plasma</strong> setup.<br />
-        It's installed on internal storage and used when I need to dive into raw
-        networking, packet inspection, or just look cool at cafes. (I don't know
-        the H of hacking `LOL`)
-      </p>
-      <div class="screenshot-gallery">
-        <img src="assets/kali1.png" alt="Kali KDE Rice Screenshot 1" />
-        <img src="assets/kali2.png" alt="Kali KDE Rice Screenshot 2" />
-      </div>
-      <h3>Fallback: Windows 11</h3>
-      <p>
-        Yeah, I keep Windows 11 around too — mostly for school submissions, some
-        light gaming, and testing stuff on a standard setup.<br />
-        Of course, it’s optimized and stripped of every bit of bloat I could
-        find.
-      </p>
-      <div class="screenshot-gallery">
-        <img src="assets/win1.png" alt="Windows 11 Screenshot 1" />
-        <img src="assets/win2.png" alt="Windows 11 Screenshot 2" />
-      </div>
-    </section>
-
-    <!-- Scripts & Tools Section -->
-    <section class="arsenal-section">
-      <h2 data-title="SECTION NAME">Custom Scripts & CLI Tools</h2>
-      <ul>
-        <li>
-          <strong>vpn.sh</strong> — Custom OpenVPN handler with logging &
-          caching
-        </li>
-        <li>
-          <strong>screen-record.sh</strong> — Rofi + wf-recorder + slurp powered
-          screen capture
-        </li>
-      </ul>
-    </section>
-
-    <!-- Terminal Loadout -->
-    <section class="arsenal-section">
-      <h2 data-title="SECTION NAME">Terminal Loadout</h2>
-      <ul>
-        <li>Editor: <strong>Neovim</strong> (with custom plugins)</li>
-        <li>System Monitors: <strong>btop</strong>, <strong>htop</strong></li>
-        <li>Visual: <strong>cava</strong> (because music must look good)</li>
-      </ul>
-    </section>
-
-    <!-- Hardware Specs -->
-    <section class="arsenal-section">
-      <h2 data-title="SECTION NAME">Hardware Arsenal</h2>
-      <ul>
-        <li>
-          <strong>CPU:</strong> Intel Core i7-1255U (10-core: 2P + 8E, turbo up
-          to 4.70GHz)
-        </li>
-        <li>
-          <strong>iGPU:</strong> Intel UHD Graphics (integrated, but optimized
-          to the bone)
-        </li>
-        <li><strong>RAM:</strong> 16GB DDR4 @ 3200MHz (Dual-channel)</li>
-        <li>
-          <strong>Internal Storage:</strong> 1TB NVMe SSD (Windows 11, Kali KDE)
-        </li>
-        <li>
-          <strong>External:</strong> 300GB HDD with full Arch Linux + Hyprland
-          (encrypted, btrfs)
-        </li>
-        <li><strong>Display:</strong> 15.6\" FHD (1920x1080), 60Hz</li>
-        <li>
-          <strong>Audio:</strong> Realtek ALC series (pipewire + cava visuals)
-        </li>
-        <li><strong>Network:</strong> Intel Wi-Fi 6 AX201 + Bluetooth 5.2</li>
-        <li>
-          <strong>Battery:</strong> 3-cell, 42Wh (not bad when Linux doesn't
-          drain it 😂)
-        </li>
-      </ul>
-    </section>
-    <!-- Hidden Terminal Easter Egg -->
-    <div id="neofetch-output" class="neofetch-terminal" style="display: none;">
-      <div id="terminal-content"></div>
+    <h3><strong>Secondary Setup: Arch Linux (External HDD)</strong></h3>
+    <p>
+      Same Arch + Hyprland setup, just portable.<br />
+      A full system living on a 300 GB external HDD — encrypted, snapshot‑ready, and carrying my exact workflow wherever
+      I go.<br />
+      It’s overkill for a rescue drive, but it boots on almost anything, so I can debug or work anywhere without
+      touching someone else’s system.
+    </p>
+    <div class="screenshot-gallery">
+      <img src="assets/hypr1-hdd.png" alt="Hyprland HDD Rice Screenshot 1" />
+      <img src="assets/hypr2-hdd.png" alt="Hyprland HDD Rice Screenshot 2" />
+      <img src="assets/hypr3-hdd.png" alt="Hyprland HDD Rice Screenshot 3" />
     </div>
-    <p class="hint" id="terminal-hint">💡 Psst... try typing <code>help</code> and hit <kbd>Enter</kbd></p>
-    <!-- Footer -->
-    <footer class="arsenal-footer">
-      <p>© 2025 Cypher-Monarch. All Rights Reserved.</p>
-    </footer>    
-  </body>
+
+    <h3><strong>Fallback: Windows 11</strong></h3>
+    <p>
+      Kept around for school submissions, standard‑environment testing, and the occasional game.<br />
+      It’s stripped of every bit of bloat I could find — nothing runs unless I say so.
+    </p>
+    <div class="screenshot-gallery">
+      <img src="assets/win1.png" alt="Windows 11 Screenshot 1" />
+      <img src="assets/win2.png" alt="Windows 11 Screenshot 2" />
+    </div>
+  </section>
+
+  <!-- Scripts & Tools Section -->
+  <section class="arsenal-section">
+    <h2 data-title="SECTION NAME">Custom Scripts & CLI Tools</h2>
+    <ul>
+      <li>
+        <strong>vpn.sh</strong> — Custom OpenVPN handler with logging &
+        caching
+      </li>
+      <li>
+        <strong>screen-record.sh</strong> — Rofi + wf-recorder + slurp powered
+        screen capture
+      </li>
+      <li>
+        <strong>vibe-mode.sh</strong> — Nothing much, just launches instances of
+        cmatrix and cava (cz well vibes 😂)
+      </li>
+      <li>
+        <strong>traumatize-windows.sh</strong> — This one i came up with when I was
+        really bored, it mounts windows' efi partition and threatens to delete it’s
+        bootloader (it doesn't)
+      </li>
+      <li>
+        <strong>chroot-hdd.sh</strong> — I had such a neiche problem of not having consistent
+        workflows that i went ahead and manually scripted a chroot script to work consistently
+        across all my setups
+      </li>
+    </ul>
+  </section>
+
+  <!-- Terminal Loadout -->
+  <section class="arsenal-section">
+    <h2 data-title="SECTION NAME">Terminal Loadout</h2>
+    <ul>
+      <li>Editor: <strong>neovim</strong> and sometimes <strong>code-oss</strong></li>
+      <li>System Monitors: <strong>btop</strong>, <strong>htop</strong></li>
+      <li>Visual: <strong>cava</strong> (because music must look good)</li>
+    </ul>
+  </section>
+
+  <!-- Hardware Specs -->
+  <section class="arsenal-section">
+    <h2 data-title="SECTION NAME">Hardware Arsenal</h2>
+    <ul>
+      <li>
+        <strong>CPU:</strong> Intel Core i7-1255U (10-core: 2P + 8E, turbo up
+        to 4.70GHz)
+      </li>
+      <li>
+        <strong>iGPU:</strong> Intel UHD Graphics (integrated, but optimized
+        to the bone)
+      </li>
+      <li><strong>RAM:</strong> 16GB DDR4 @ 3200MHz (Dual-channel)</li>
+      <li>
+        <strong>Internal Storage:</strong> 1TB NVMe SSD (Windows 11, Kali KDE)
+      </li>
+      <li>
+        <strong>External:</strong> 300GB HDD with full Arch Linux + Hyprland
+        (encrypted, btrfs)
+      </li>
+      <li><strong>Display:</strong> 15.6\" FHD (1920x1080), 60Hz</li>
+      <li>
+        <strong>Audio:</strong> Realtek ALC series (pipewire + cava visuals)
+      </li>
+      <li><strong>Network:</strong> Intel Wi-Fi 6 AX201 + Bluetooth 5.2</li>
+      <li>
+        <strong>Battery:</strong> 3-cell, 42Wh (not bad when Linux doesn't
+        drain it)
+      </li>
+    </ul>
+  </section>
+  <!-- Hidden Terminal Easter Egg -->
+  <div id="neofetch-output" class="neofetch-terminal" style="display: none;">
+    <div id="terminal-content"></div>
+  </div>
+  <p class="hint" id="terminal-hint">💡 Psst... try typing <code>help</code> and hit <kbd>Enter</kbd></p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Cypher-Monarch. All Rights Reserved.</p>
+  </footer>
+</body>
+
 </html>

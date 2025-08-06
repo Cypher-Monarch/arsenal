@@ -55,16 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
         __/ | |                                                                   
        |___/|_|                                                                   
 
-OS      : Arch Linux (Hyprland, external HDD)
-WM      : Hyprland 🔪
+OS      : Arch Linux (Hyprland, external HDD + Bare Metal)
+WM      : Hyprland 
 Kernel  : 6.xx.x-arch1-1
 Uptime  : 6h 43m
 CPU     : Intel i7-1255U (10C/12T)
-GPU     : Intel UHD Graphics (tweaked to hell)
+GPU     : Intel UHD Graphics (don't roast me)
 RAM     : 16GB DDR4 @ 3200MHz
-Shell   : bash + kitty
-Editor  : Code-Oss and Neovim
-Mood    : Chaotic Good
+Shell   : zsh + kitty (ftw)
+Editor  : code-oss and neovim
+Mood    : codeable
 `;
 
   const commands = {
@@ -72,9 +72,10 @@ Mood    : Chaotic Good
     help: () => "Available commands:\n- neofetch\n- help\n- clear\n- whoami\n- sudo\n- ls\n- sudo rm -rf /",
     whoami: () => "Not the GOAT Cypher-Monarch fs",
     ls: () => "Nothing here lol",
-    sudo: () => "💀 Permission denied: you ain't root",
-    "sudo rm -rf /": () => "😈 Initiating global self-destruction... just kidding lol. Arsenal's too powerful to delete.",
-    clear: () => ""
+    sudo: () => "Permission denied: you ain't root",
+    "sudo rm -rf /": () => "Initiating global self-destruction... just kidding lol. Arsenal's too powerful to delete.",
+    clear: () => "",
+    cls: () => ""
   };
 
   function addNewPrompt() {
@@ -109,7 +110,7 @@ Mood    : Chaotic Good
   function runCommand(cmd) {
     if (!terminalDiv) return;
 
-    if (cmd === "clear") {
+    if (cmd === "clear" || cmd === "cls") {
       terminalDiv.innerHTML = "";
       addNewPrompt();
       return;
