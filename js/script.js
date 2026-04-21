@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const lines = [
-    "[+] Initializing Cypher-Monarch's Arsenal...",
-    "[+] Loading OS configs...",
-    "[+] Mounting /dev/hdd_300GB",
-    "[+] Loading Hyprland config",
-    "[+] Establishing VPN handler...",
-    "[+] Injecting scripts into bashrc...",
-    "[✓] All systems online.",
-    "Launching GUI interface..."
+    "[•] Initializing Cypher-Monarch's Arsenal...",
+    "[•] Loading system configuration...",
+    "[•] Mounting /dev/hdd...",
+    "[•] Hydrating MonarchDots...",
+    "[•] Establishing CypherGate...",
+    "[•] Spawning more scripts than necessary...",
+    "[✓] System online.",
+    "[→] Launching interface..."
   ];
 
   const terminalIntro = document.getElementById("terminal-lines");
   const terminalDiv = document.getElementById("neofetch-output");
   let lineIndex = 0, charIndex = 0;
-  const typingSpeed = 50;
+  const typingSpeed = 25;
   const cursor = document.createElement("span");
   cursor.textContent = "█";
   terminalIntro.appendChild(cursor);
