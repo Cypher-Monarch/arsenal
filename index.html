@@ -1,121 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-  <title>Arsenal | Cypher-Monarch</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Cypher-Monarch's Arsenal: systems, hardware, software, and the self-hosted stack behind the setup.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
+  <title>Arsenal // Cypher-Monarch</title>
 </head>
-
 <body>
-  <div id="terminal-intro" class="intro-terminal">
-    <pre id="terminal-lines"></pre>
-  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scan-grid" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header class="arsenal-header">
-    <h1>Cypher-Monarch's Arsenal</h1>
-    <p>My complete dev loadout</p>
-  </header>
-
-  <!-- OS Setup Section -->
-  <section class="arsenal-section">
-    <h2 data-title="SECTION NAME">Operating System</h2>
-
-    <h3><strong>Daily Driver: Arch Linux (Bare‑Metal)</strong></h3>
-    <p>
-      My main rig runs <strong>Arch Linux</strong> with <strong>Hyprland</strong> — minimal, lightning-fast, and dialed in until it feels like it was built just for me.
-      Rocking <code>Btrfs</code> with <code>Timeshift</code> snapshots for instant rollbacks — because breaking things is part of the fun, and recovery should be painless.
-      Every tool I need sits exactly where I want it. Pure dev heaven.
-      (PS — grub-btrfs in action, well makes, Windows restore points look like a toddler trying to lift weights.)
-    </p>
-    <div class="screenshot-gallery">
-      <img src="assets/hypr1-bare.png" alt="Hyprland Bare Rice Screenshot 1" />
-      <img src="assets/hypr2-bare.png" alt="Hyprland Bare Rice Screenshot 2" />
-      <img src="assets/hypr3-bare.png" alt="Hyprland Bare Rice Screenshot 3" />
-      <img src="assets/hypr4-bare.png" alt="Hyprland Bare Rice Screenshot 4" />
-      <img src="assets/hypr5-bare.png" alt="Hyprland Bare Rice Screenshot 5" />
-      <img src="assets/hypr6-bare.png" alt="Hyprland Bare Rice Screenshot 6" />
-      <img src="assets/hypr7-bare.png" alt="Hyprland Bare Rice Screenshot 7" />
-      <img src="assets/hypr8-bare.png" alt="Hyprland Bare Rice Screenshot 8" />
+  <!-- ===== Boot sequence ===== -->
+  <div id="terminal-intro" class="boot-screen" aria-label="Arsenal boot sequence">
+    <div class="boot-frame">
+      <div class="boot-top"><span class="boot-dot"></span><span>CM / FIELD SYSTEMS</span><span>BUILD 26.10</span></div>
+      <pre id="terminal-lines"></pre>
+      <div class="boot-progress"><span></span></div>
+      <div class="boot-bottom"><span>INITIALIZING LOADOUT</span><span>PLEASE STAND BY</span></div>
     </div>
-
-    <h3><strong>Secondary Setup: Arch Linux (External HDD)</strong></h3>
-    <p>
-      Same Arch + Hyprland vibe, but fully portable.
-      A 300 GB external HDD — encrypted, Timeshift-ready, and carrying my full workflow wherever I go.
-      Overkill for a rescue drive? Absolutely. But it boots on almost anything, so I can debug, code, or flex my setup anywhere without touching someone else’s system.
-    </p>
-  </section>
-
-  <!-- Terminal Loadout -->
-  <section class="arsenal-section">
-    <h2 data-title="SECTION NAME">Terminal Loadout</h2>
-    <ul>
-      <li>Shell: <strong>ZSH</strong> with a custom <strong>Powerlevel10k</strong> config.</li>
-      <li>Editor: <strong>neovim</strong> and sometimes <strong>code-oss</strong>.</li>
-      <li>System Monitors: <strong>btop</strong> for its clean interface.</li>
-      <li>Visual: <strong>cava</strong> (because music must look good)</li>
-      <li>Music: <strong>ncmpcpp</strong> and <strong>mpd</strong> because uhhh, why not?</li>
-    </ul>
-  </section>
-
-  <!-- Hardware Specs -->
-  <section class="arsenal-section">
-    <h2 data-title="SECTION NAME">Hardware Arsenal</h2>
-    <ul>
-      <li>
-        <strong>CPU:</strong> Intel Core i7-1255U (10-core: 2P + 8E, turbo up
-        to 4.70GHz)
-      </li>
-      <li>
-        <strong>iGPU:</strong> Intel UHD Graphics (integrated, but optimized
-        to the bone)
-      </li>
-      <li><strong>RAM:</strong> 16GB DDR4 @ 3200MHz (Single-channel)</li>
-      <li>
-        <strong>Internal Storage:</strong> 1TB NVMe SSD (Arch Linux, and a bunch of VMs)
-      </li>
-      <li>
-        <strong>External:</strong> 300GB HDD with full Arch Linux + Hyprland
-        (encrypted, btrfs)
-      </li>
-      <li><strong>Display:</strong> 15.6" FHD IPS Panel (1920x1080), 60Hz</li>
-      <li>
-        <strong>Audio:</strong> Realtek ALC series (pipewire + cava visuals)
-      </li>
-      <li><strong>Network:</strong> Intel Wi-Fi 6 AX201 + Bluetooth 5.2</li>
-      <li>
-        <strong>Battery:</strong> 3-cell, 42Wh (not bad when Linux doesn't
-        drain it)
-      </li>
-    </ul>
-  </section>
-
-  <!-- Self Host -->
-  <section class='arsenal-section'>
-    <h2 data-title='SECTION NAME'>Self Host</h2>
-    <ul>
-      <li>Media Server: <strong>Jellyfin</strong> on web and desktop, <strong>Finamp</strong> and <strong>Findroid</strong> on android.</li>
-      <li>Media Automation: <strong>Radarr</strong> for Movies and <strong>Sonarr</strong> for series/anime.</li>
-      <li>Dashboard: <strong>Homepage</strong> for an overview to all services.</li>
-      <li>Remote: <strong>Tailscale</strong> for a secure mesh network and remote access capabilities.</li>
-      <li>Torrenting: <strong>Transmission-cli</strong> as the torrenting backend and <strong>Prowlarr</strong> as the indexer aggregator.</li>
-    </ul>
-  </section>
-
-  <!-- Hidden Terminal Easter Egg -->
-  <div id="neofetch-output" class="neofetch-terminal" style="display: none;">
-    <div id="terminal-content"></div>
   </div>
-  <p class="hint" id="terminal-hint">💡 Psst... try typing <code>help</code> and hit <kbd>Enter</kbd></p>
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Cypher-Monarch. All Rights Reserved.</p>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="topbar" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Arsenal home">
+      <span class="brand-mark">C<span>/</span>M</span>
+      <span class="brand-copy"><span class="brand-overline">CY­PHER-MONARCH</span><strong>ARSENAL<span class="brand-period">.</span></strong></span>
+    </a>
+    <div class="topbar-status"><span class="status-led"></span> SYSTEM ONLINE</div>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#systems">Systems</a></li>
+      <li><a href="#terminal">Terminal</a></li>
+      <li><a href="#hardware">Hardware</a></li>
+      <li><a href="#self-hosted">Self-hosted</a></li>
+      <li><a href="#field-notes">Field notes</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <!-- ===== Hero ===== -->
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-index">00</span><span class="eyebrow-line"></span> PERSONAL SYSTEMS / CONFIGURATION ARCHIVE</p>
+        <h1>My <span>Arsenal</span><i>.</i></h1>
+        <p class="hero-lede">A collection of systems, tools, and questionable amounts of automation. Built to work together. Tuned until it feels right.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#self-hosted">Inspect the stack <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#systems">Explore the setup <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-readout">
+          <div><span class="readout-label">PRIMARY OS</span><strong>ARCH LINUX</strong></div>
+          <div><span class="readout-label">WINDOW MANAGER</span><strong>HYPRLAND</strong></div>
+          <div><span class="readout-label">OPERATING MODE</span><strong><span class="status-led"></span> ALWAYS TINKERING</strong></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Arsenal system insignia">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="reticle reticle-top">CM—01 / ARCH</div>
+        <div class="insignia">
+          <span class="insignia-small">CYPHER</span>
+          <span class="insignia-main">C<span>/</span>M</span>
+          <span class="insignia-small">MONARCH</span>
+        </div>
+        <div class="art-cross cross-a"></div><div class="art-cross cross-b"></div>
+        <div class="art-label">SYSTEMS<br>IN SERVICE</div>
+        <div class="art-stamp">FIELD<br>TESTED</div>
+        <div class="reticle reticle-bottom">EST. THROUGH CURIOSITY</div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO INSPECT</span><span>01 — 05</span></div>
+    </header>
+
+    <!-- ===== Systems ===== -->
+    <section class="section section-systems" id="systems">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-index">01</span><span class="eyebrow-line"></span> THE FOUNDATION</p>
+        <h2>Systems <span>first.</span></h2>
+        <p class="section-intro">I don't treat my machines as separate islands. They're parts of one connected, slightly over-engineered system.</p>
+      </div>
+      <div class="system-layout">
+        <article class="feature-panel">
+          <div class="panel-head"><span>01 / DAILY DRIVER</span><span class="panel-tag">BARE METAL</span></div>
+          <div class="panel-body">
+            <div class="panel-icon">A<span>/</span></div>
+            <div><h3>Arch Linux <span class="subtle">×</span> Hyprland</h3><p>The daily driver. Minimal, fast, and dialled in until it feels like it was built specifically for me.</p></div>
+          </div>
+          <div class="spec-line"><span>FILESYSTEM</span><strong>BTRFS</strong><span>RECOVERY</span><strong>TIMESHIFT + GRUB-BTRFS</strong></div>
+          <p class="panel-footnote">Break things. Learn things. Roll back when necessary.</p>
+        </article>
+        <article class="feature-panel feature-panel-secondary">
+          <div class="panel-head"><span>02 / PORTABLE ENVIRONMENT</span><span class="panel-tag">EXTERNAL DRIVE</span></div>
+          <div class="panel-body">
+            <div class="panel-icon">↗</div>
+            <div><h3>Arch, on the move.</h3><p>A 300 GB encrypted external HDD carrying the full Arch + Hyprland workflow. A portable workstation, rescue environment, and occasional flex.</p></div>
+          </div>
+          <div class="spec-line"><span>CAPACITY</span><strong>300 GB</strong><span>FORMAT</span><strong>BTRFS / ENCRYPTED</strong></div>
+        </article>
+      </div>
+      <div class="principle-strip"><span class="principle-mark">“</span><p>Operating systems are components, not boundaries.</p><span class="principle-code">CM / PRINCIPLE 001</span></div>
+      <div class="screenshot-block">
+        <div class="subsection-heading"><div><span class="micro-index">VISUAL RECORD / 01</span><h3>The desktop, in its natural habitat.</h3></div><span class="gallery-count">08 FRAMES</span></div>
+        <div class="screenshot-gallery">
+          <a href="assets/hypr1-bare.png" target="_blank" rel="noopener"><img src="assets/hypr1-bare.png" alt="Hyprland desktop setup, view one" loading="lazy"><span>FRAME 01</span></a>
+          <a href="assets/hypr2-bare.png" target="_blank" rel="noopener"><img src="assets/hypr2-bare.png" alt="Hyprland desktop setup, view two" loading="lazy"><span>FRAME 02</span></a>
+          <a href="assets/hypr3-bare.png" target="_blank" rel="noopener"><img src="assets/hypr3-bare.png" alt="Hyprland desktop setup, view three" loading="lazy"><span>FRAME 03</span></a>
+          <a href="assets/hypr4-bare.png" target="_blank" rel="noopener"><img src="assets/hypr4-bare.png" alt="Hyprland desktop setup, view four" loading="lazy"><span>FRAME 04</span></a>
+          <a href="assets/hypr5-bare.png" target="_blank" rel="noopener"><img src="assets/hypr5-bare.png" alt="Hyprland desktop setup, view five" loading="lazy"><span>FRAME 05</span></a>
+          <a href="assets/hypr6-bare.png" target="_blank" rel="noopener"><img src="assets/hypr6-bare.png" alt="Hyprland desktop setup, view six" loading="lazy"><span>FRAME 06</span></a>
+          <a href="assets/hypr7-bare.png" target="_blank" rel="noopener"><img src="assets/hypr7-bare.png" alt="Hyprland desktop setup, view seven" loading="lazy"><span>FRAME 07</span></a>
+          <a href="assets/hypr8-bare.png" target="_blank" rel="noopener"><img src="assets/hypr8-bare.png" alt="Hyprland desktop setup, view eight" loading="lazy"><span>FRAME 08</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Terminal loadout ===== -->
+    <section class="section section-terminal" id="loadout">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-index">02</span><span class="eyebrow-line"></span> DAILY INTERFACE</p>
+        <h2>Comfortable in <span>the shell.</span></h2>
+        <p class="section-intro">The tools I reach for every day. No ceremony; just the stuff that earns its place.</p>
+      </div>
+      <div class="loadout-grid">
+        <article class="loadout-card"><span class="loadout-number">01</span><div><span class="card-label">SHELL</span><h3>Zsh <span>+</span> Powerlevel10k</h3><p>A prompt with just enough information and just enough personality.</p></div><span class="card-status">ACTIVE</span></article>
+        <article class="loadout-card"><span class="loadout-number">02</span><div><span class="card-label">EDITOR</span><h3>Neovim <span>/</span> Code-OSS</h3><p>Modal editing when the mood hits. A conventional editor when it doesn't.</p></div><span class="card-status">ACTIVE</span></article>
+        <article class="loadout-card"><span class="loadout-number">03</span><div><span class="card-label">MONITORING</span><h3>btop</h3><p>Because system activity deserves a decent interface.</p></div><span class="card-status">ACTIVE</span></article>
+        <article class="loadout-card"><span class="loadout-number">04</span><div><span class="card-label">VISUALS</span><h3>Cava <span>+</span> Waybar</h3><p>Audio visualisation and a bar that makes the desktop feel complete.</p></div><span class="card-status">ACTIVE</span></article>
+        <article class="loadout-card"><span class="loadout-number">05</span><div><span class="card-label">MUSIC</span><h3>ncmpcpp <span>+</span> MPD</h3><p>Local music, terminal controls, and absolutely no need to explain it.</p></div><span class="card-status">ACTIVE</span></article>
+        <article class="loadout-card loadout-card-wide"><span class="loadout-number">06</span><div><span class="card-label">SYSTEM GLUE</span><h3>SSH <span>+</span> Tailscale <span>+</span> systemd</h3><p>Remote access, mesh networking, custom services, automated workflows, and machines behaving like one larger system.</p></div><span class="card-status">CONNECTED</span></article>
+      </div>
+    </section>
+
+    <!-- ===== Hardware ===== -->
+    <section class="section section-hardware" id="hardware">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-index">03</span><span class="eyebrow-line"></span> UNDER THE HOOD</p>
+        <h2>Hardware <span>profile.</span></h2>
+        <p class="section-intro">Not a monster workstation. Just a machine I know how to get the most out of.</p>
+      </div>
+      <div class="hardware-panel">
+        <div class="hardware-visual">
+          <div class="chip-frame"><div class="chip"><span>INTEL</span><strong>i7</strong><small>12TH GEN</small></div><div class="chip-pins"></div></div>
+          <span class="hardware-visual-label">PRIMARY COMPUTE UNIT / 01</span>
+        </div>
+        <div class="hardware-specs">
+          <div class="hardware-row"><span>PROCESSOR</span><strong>Intel Core i7-1255U</strong><small>10 cores · 2P + 8E · up to 4.70 GHz</small></div>
+          <div class="hardware-row"><span>GRAPHICS</span><strong>Intel UHD Graphics</strong><small>Integrated graphics, tuned to the bone</small></div>
+          <div class="hardware-row"><span>MEMORY</span><strong>16 GB DDR4</strong><small>3200 MHz · single channel</small></div>
+          <div class="hardware-row"><span>INTERNAL STORAGE</span><strong>1 TB NVMe SSD</strong><small>Arch Linux + virtual machines</small></div>
+          <div class="hardware-row"><span>PORTABLE STORAGE</span><strong>300 GB external HDD</strong><small>Encrypted · Btrfs · Arch Linux + Hyprland</small></div>
+          <div class="hardware-row"><span>DISPLAY</span><strong>15.6″ FHD IPS</strong><small>1920 × 1080 · 60 Hz</small></div>
+          <div class="hardware-row"><span>NETWORK</span><strong>Intel Wi-Fi 6 AX201</strong><small>Bluetooth 5.2</small></div>
+          <div class="hardware-row"><span>AUDIO</span><strong>Realtek ALC + PipeWire</strong><small>Cava visualisation</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Self-hosted stack ===== -->
+    <section class="section section-selfhost" id="self-hosted">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-index">04</span><span class="eyebrow-line"></span> PERSONAL INFRASTRUCTURE</p>
+        <h2>My little <span>datacenter.</span></h2>
+        <p class="section-intro">At some point, “I should probably host this myself” became a recurring thought. This is the result.</p>
+      </div>
+      <div class="stack-banner">
+        <div><span class="card-label">THE STACK / CURRENT DEPLOYMENT</span><h3>Services, stitched together.</h3></div>
+        <div class="stack-count"><strong>09</strong><span>CORE SERVICES</span></div>
+      </div>
+      <div class="service-grid">
+        <a class="service-card service-featured" href="https://jellyfin.org/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 01</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg" alt="" loading="lazy"></span><span class="service-category">MEDIA SERVER</span><h3>Jellyfin</h3><p>My media library, available across the devices I use.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://sonarr.tv/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 02</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sonarr.svg" alt="" loading="lazy"></span><span class="service-category">TV AUTOMATION</span><h3>Sonarr</h3><p>Series and anime library automation.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://radarr.video/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 03</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/radarr.svg" alt="" loading="lazy"></span><span class="service-category">MOVIE AUTOMATION</span><h3>Radarr</h3><p>Movie library automation and organisation.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://prowlarr.com/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 04</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prowlarr.svg" alt="" loading="lazy"></span><span class="service-category">INDEXER MANAGEMENT</span><h3>Prowlarr</h3><p>One place to manage indexers for the media stack.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://www.qbittorrent.org/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 05</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/qbittorrent.svg" alt="" loading="lazy"></span><span class="service-category">DOWNLOAD ENGINE</span><h3>qBittorrent</h3><p>The current torrenting backend.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://docs.seerr.dev/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 06</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seerr.svg" alt="" loading="lazy"></span><span class="service-category">MEDIA REQUESTS</span><h3>Seerr</h3><p>A friendlier front door for requesting media.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://wiki.kavitareader.com/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 07</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/kavita.svg" alt="" loading="lazy"></span><span class="service-category">READING LIBRARY</span><h3>Kavita</h3><p>A home for books, comics, and manga.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://beszel.dev/" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 08</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/beszel.svg" alt="" loading="lazy"></span><span class="service-category">HOST MONITORING</span><h3>Beszel</h3><p>Lightweight monitoring for the machines behind the scenes.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+        <a class="service-card" href="https://github.com/nicolargo/glances" target="_blank" rel="noopener noreferrer">
+          <span class="service-index">SV / 09</span><span class="service-symbol"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/glances.svg" alt="" loading="lazy"></span><span class="service-category">SYSTEM TELEMETRY</span><h3>Glances</h3><p>A live look at what's happening across system resources.</p><span class="service-open">PROJECT SITE ↗</span>
+        </a>
+      </div>
+
+      <div class="client-section">
+        <div class="subsection-heading"><div><span class="micro-index">CLIENT DEPLOYMENT</span><h3>Same library. Different screens.</h3></div><span class="section-stamp">JELLYFIN CLIENTS</span></div>
+        <div class="client-grid">
+          <article class="client-card"><div class="client-platform">ANDROID / VIDEO</div><div class="client-icon">F<span>›</span></div><h4>Fladder</h4><p>My Jellyfin video client on Android.</p><span class="client-status">IN USE</span></article>
+          <article class="client-card"><div class="client-platform">ANDROID / AUDIO</div><div class="client-icon">F<span>♪</span></div><h4>Finamp</h4><p>Music playback from the same self-hosted library.</p><span class="client-status">IN USE</span></article>
+          <article class="client-card"><div class="client-platform">DESKTOP / LINUX</div><div class="client-icon">P<span>›</span></div><h4>Plezy</h4><p>The desktop client of choice on Linux.</p><span class="client-status">IN USE</span></article>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <div class="control-graphic"><span class="control-ring"></span><span class="control-phone"><i></i><b>⌁</b></span><span class="control-orbit-label">REMOTE CONTROL / MOBILE</span></div>
+        <div class="control-copy"><span class="card-label">CONTROL PLANE / 01</span><h3>Atrium, not another dashboard.</h3><p>I don't use Homepage anymore. Atrium is the remote-control app I use from my phone to interact with the setup — less dashboard tourism, more actually controlling things.</p><div class="control-tags"><span>PHONE-FIRST</span><span>REMOTE CONTROL</span><span>HOMELAB</span></div></div>
+      </div>
+      <div class="stack-note"><span class="note-symbol">↳</span><p><strong>One system, not a pile of apps.</strong> Jellyfin handles the library; Sonarr, Radarr, Prowlarr, qBittorrent, and Seerr handle the media workflow; Kavita handles reading; Beszel and Glances keep an eye on the machinery.</p></div>
+    </section>
+
+    <!-- ===== Field notes ===== -->
+    <section class="section section-notes" id="field-notes">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-index">05</span><span class="eyebrow-line"></span> FIELD NOTES</p>
+        <h2>Things I <span>believe.</span></h2>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card"><span>NOTE / 001</span><p>If something takes more than two steps, automate it.</p></article>
+        <article class="note-card"><span>NOTE / 002</span><p>If it takes one step, automate it anyway.</p></article>
+        <article class="note-card"><span>NOTE / 003</span><p>Good software should disappear into the system around it.</p></article>
+        <article class="note-card note-card-featured"><span>NOTE / 004</span><p>If it needs to be complicated underneath, that's fine. Just don't make the person using it deal with that complexity.</p></article>
+      </div>
+      <div class="outside-code"><div><span class="card-label">OUTSIDE THE TERMINAL</span><h3>Human hardware, too.</h3></div><p>Anime, gaming, badminton, baking, cars, PC hardware, and photography. The terminal doesn't get all the hours.</p></div>
+    </section>
+
+    <!-- ===== Interactive terminal ===== -->
+    <section class="section section-terminal-console" id="terminal">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-index">06</span><span class="eyebrow-line"></span> DIRECT ACCESS / TTY 001</p>
+        <h2>Drop into <span>the shell.</span></h2>
+        <p class="section-intro">A little corner of the Arsenal you can actually poke at. Type a command and hit Enter.</p>
+      </div>
+      <div class="terminal-widget">
+        <div class="terminal-titlebar">
+          <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="terminal-window-name">cypher@arsenal: ~</span>
+          <span class="terminal-title-right">ZSH-STYLE / SANDBOX</span>
+        </div>
+        <div class="terminal-content">
+          <div class="terminal-aside" aria-hidden="true"><span>CM</span><span>01</span><span>CLI</span></div>
+          <div class="terminal-main">
+            <pre class="terminal-output" id="neofetch-output" aria-live="polite">Arsenal shell ready.
+Type help to see available commands.</pre>
+            <form class="terminal-line" id="terminal-form">
+              <label class="prompt" for="terminal-input">[cypher@arsenal ~]$</label>
+              <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command">
+            </form>
+            <p class="terminal-hint" id="terminal-hint">TRY: <code>help</code> · <code>neofetch</code> · <code>tree</code> · <code>cat README.md</code> · <code>history</code></p>
+          </div>
+        </div>
+        <div class="terminal-status"><span><i class="status-led"></i> INTERACTIVE SESSION</span><span>SIMULATED SHELL / NO SYSTEM COMMANDS RUN</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <a class="footer-brand" href="#top"><span class="brand-mark">C<span>/</span>M</span><span>ARSENAL<span class="brand-period">.</span></span></a>
+    <p>Built with curiosity, obsession, and way too many scripts.</p>
+    <a class="back-top" href="#top">BACK TO TOP ↑</a>
+    <span class="footer-signoff">BLACK / GOLD / UNIX</span>
   </footer>
 </body>
-
 </html>
